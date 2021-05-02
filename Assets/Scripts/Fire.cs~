@@ -1,0 +1,12 @@
+﻿using UnityEngine;
+
+public class Fire : MonoBehaviour
+{
+    public Rigidbody Player;
+    static float Force;
+
+    void Update()
+    {
+        Player.AddForce(new Vector3(0,0,Force));
+    }
+}

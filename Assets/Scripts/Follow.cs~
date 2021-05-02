@@ -1,0 +1,19 @@
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class Follow : MonoBehaviour
+{
+    public Transform Cam;
+    public Transform PlayerLoc;
+    public Vector3 Offset;
+
+    void Update()
+    {
+        Cam.position = PlayerLoc.position + Offset;
+        if (PlayerLoc.position.y <= 0)
+        {
+            SceneManager.UnloadScene(0);
+            SceneManager.LoadScene(0);
+        }    
+    }
+}

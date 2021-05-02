@@ -1,0 +1,25 @@
+﻿using UnityEngine;
+
+public class Keys : MonoBehaviour
+{
+
+    public Rigidbody Player;
+    public Vector3 SideForce;
+    public Vector3 UpForce;
+
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            Player.AddForce(-SideForce);
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            Player.AddForce(SideForce);
+        }
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            Player.AddForce(UpForce);
+        }
+    }
+}

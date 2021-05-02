@@ -1,0 +1,15 @@
+﻿using UnityEngine;
+
+public class Obstruct : MonoBehaviour
+{
+    public Transform Player;
+    public GameObject Obstracle;
+
+    void Update()
+    {
+        if (((int)(Time.time * 10f) % 10) == 0)
+        {
+            Instantiate(Obstracle, new Vector3(0, 1f, Player.position.z + Random.Range(50, 55)), Quaternion.identity);
+        }
+    }
+}

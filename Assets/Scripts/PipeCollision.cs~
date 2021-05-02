@@ -1,0 +1,14 @@
+﻿using UnityEngine;
+
+public class PipeCollision : MonoBehaviour
+{
+    void OnCollisionEnter(Collision info)
+    {
+        Debug.Log("Collision");
+        if (info.collider.tag == "Obstracle")
+        {
+            GameObject CollisionObject = info.collider.gameObject;
+            Destroy(CollisionObject);
+        }
+    }
+}
